@@ -17,6 +17,7 @@ var app = angular.module('fakeLunchHubApp', [
     'ngRoute',
     // 'ngSanitize',
     // 'ngTouch'
+    'ng-token-auth'
   ]);
 
 app.config(function ($routeProvider) {
@@ -28,6 +29,10 @@ app.config(function ($routeProvider) {
     .when('/about', {
       templateUrl: 'views/about.html',
       controller: 'AboutCtrl'
+    })
+   .when('/sign_in', {
+      templateUrl: 'views/user_sessions/new.html',
+      controller: 'UserSessionsCtrl'
     })
     .when('/groups', {
       templateUrl: 'views/groups.html',

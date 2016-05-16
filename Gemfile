@@ -7,11 +7,18 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
+gem 'devise_token_auth'
 
 gem 'pg'
 
+# added to make "rake routes" workable
+gem 'omniauth'
+
 group :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'capybara'
 end
 
 # To use ActiveModel has_secure_password
